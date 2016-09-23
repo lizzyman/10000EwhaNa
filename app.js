@@ -1,7 +1,7 @@
 //hellobot
 var hellobot = require('./hellobot');
 //dicebot
-var dicebot = require('./dicebot');
+//var dicebot = require('./dicebot');
 
 var express = require('express');
 var bodyParser = require('body-parser');
