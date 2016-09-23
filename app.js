@@ -16,8 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 //hellobot
 app.post('/hello', hellobot);
+
 //dicebot
-app.post('/dice', dicebot);
+//app.post('/dice', dicebot);
+
 // error handler
 app.use(function (err, req, res, next) {
   console.error(err.stack);
