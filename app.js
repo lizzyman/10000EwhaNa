@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // test route
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 //hellobot
-app.post('/hello', hellobot);
+app.post('/help', hellobot);
 
 //dicebot
 //app.post('/dice', dicebot);
