@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/lizzyman/10000EwhaNa#readme",
   "dependencies": {
+    "async": "^2.0.1",
     "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
     "express": "^4.14.0",
-    "request": "^2.75.0"
+    "request": "^2.75.0",
+    "string-similarity": "^1.1.0"
   }
 }
