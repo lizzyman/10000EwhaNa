@@ -66,5 +66,5 @@ function send (){
 			}
 			callback (null, response.statusCode, body);
 		}
-	});
+	);
 }
