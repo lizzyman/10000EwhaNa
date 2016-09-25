@@ -1,15 +1,15 @@
 var request = require ('request');
 
 module.exports = function (req, res, next){
-//default roll is 2d6
-var matches;
-var times = 2;
-var die = 6;
-var rolls = [];
-var total = 0;
-var botPayload = {};
+  //default roll is 2d6
+  var matches;
+  var times = 2;
+  var die = 6;
+  var rolls = [];
+  var total = 0;
+  var botPayload = {};
 
-if (req.body.text){
+  if (req.body.text){
 	//parse roll type if specified
 	matches = req.body.text.match (/^(\d{1,2})d(\d{1,2})$/);
 
@@ -54,7 +54,7 @@ function roll (min, max){
 
 function send (){
 	var path = process.env.INCOMING_WEBHOOK_PATH;
-	var uri = 'https://hooks.slack.com/services' + path;
+	var uri = 'https://manewhana.herokuapp.com/' + path;
 
 	request({
 		uri: uri,
