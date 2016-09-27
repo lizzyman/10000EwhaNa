@@ -3,6 +3,7 @@
 
       request = require('request');
       config = require('../config.json');
+      config = config.command.timetable_modified;
 
       stripTags = function(string) {
                   return string.replace(/<.+?>/g, '');
