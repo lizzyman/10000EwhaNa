@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "manewhana",
   "version": "1.0.0",
   "description": "",
@@ -30,5 +31,22 @@
     "cron": "1",
     "request": "^2.75.0",
     "string-similarity": "^1.1.0"
+=======
+  "name": "test1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0",
+    "slack-client": "~2.0.6"
+>>>>>>> 556fc6376cdfe3d3beab73448b34cbba26869601
   }
 }
