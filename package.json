@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "4.5.0",
+    "npm": "1.1.49"
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lizzyman/10000EwhaNa.git"
@@ -21,6 +25,9 @@
     "body-parser": "^1.15.2",
     "cheerio": "^0.22.0",
     "express": "^4.14.0",
+    "express-namespace": "0",
+    "mongoose": "3",
+    "cron": "1",
     "request": "^2.75.0",
     "string-similarity": "^1.1.0"
   }
