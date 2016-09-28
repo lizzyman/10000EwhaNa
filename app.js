@@ -4,6 +4,12 @@ var hellobot = require('./hellobot');
 //var dicebot = require('./dicebot');
 //gonggangbot
 var gonggangbot = require('./gonggangbot');
+//emptyclassbot
+var emptyclassbot = require('./emptyclassbot');
+//subwaybot
+var subwaybot = require('./subwaybot');
+
+var dicebot = require('./dicebot');
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -22,7 +28,11 @@ app.post('/help', hellobot);
 //app.post('/dice', dicebot);
 //gonggangbot
 app.post('/gonggang', gonggangbot);
-
+//emptyclassbot
+app.post('/emptyclass', emptyclassbot);
+//subwaybot
+app.post('/subway'. subwaybot);
+app.post('/dice', dicebot);
 
 // error handler
 app.use(function (err, req, res, next) {
