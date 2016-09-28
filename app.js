@@ -3,11 +3,11 @@ var hellobot = require('./hellobot');
 //dicebot
 //var dicebot = require('./dicebot');
 //gonggangbot
-var gonggangbot = require('./gonggangbot');
+var gonggangbot = require('./gonggang');
 //emptyclassbot
-var emptyclassbot = require('./emptyclassbot');
+var emptyclassbot = require('./emptyclass');
 //subwaybot
-var subwaybot = require('./subwaybot');
+var subwaybot = require('./subway');
 
 var dicebot = require('./dicebot');
 
