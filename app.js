@@ -2,6 +2,8 @@
 var hellobot = require('./hellobot');
 //dicebot
 //var dicebot = require('./dicebot');
+//gonggangbot
+var gonggangbot = require('./gonggangbot');
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -16,9 +18,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 //hellobot
 app.post('/help', hellobot);
-
 //dicebot
 //app.post('/dice', dicebot);
+//gonggangbot
+app.post('/gonggang', gonggangbot);
+
 
 // error handler
 app.use(function (err, req, res, next) {
