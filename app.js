@@ -1,7 +1,9 @@
+<<<<<<< HEAD
 //hellobot
 var hellobot = require('./hellobot');
 //dicebot
 //var dicebot = require('./dicebot');
+<<<<<<< HEAD
 //gonggangbot
 var gonggangbot = require('./gonggang');
 //emptyclassbot
@@ -10,6 +12,8 @@ var emptyclassbot = require('./emptyclass');
 var subwaybot = require('./subway');
 
 var dicebot = require('./dicebot');
+=======
+>>>>>>> f4f33e01020c31030fb0ddd2b476b1ea41616fab
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -26,6 +30,7 @@ app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 app.post('/help', hellobot);
 //dicebot
 //app.post('/dice', dicebot);
+<<<<<<< HEAD
 //gonggangbot
 app.post('/gonggang', gonggangbot);
 //emptyclassbot
@@ -33,6 +38,8 @@ app.post('/emptyclass', emptyclassbot);
 //subwaybot
 app.post('/subway'. subwaybot);
 app.post('/dice', dicebot);
+=======
+>>>>>>> f4f33e01020c31030fb0ddd2b476b1ea41616fab
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -43,3 +50,74 @@ app.use(function (err, req, res, next) {
 app.listen(port, function () {
   console.log('Slack bot listening on port ' + port);
 });
+=======
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+//port setup
+app.set('port', process.env.PORT || 9000);
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', routes);
+app.use('/users', users);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// error handlers
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
+// -------create Server--------
+module.exports = app;
+
+var server = app.listen(app.get('port'), function() {
+    console.log('Express server listening on port' + server.address().port);
+});
+
+//module.exports = app;
+>>>>>>> 556fc6376cdfe3d3beab73448b34cbba26869601
