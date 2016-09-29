@@ -1,1 +1,3 @@
 _package.json.copy
+./node_modules/*
+./node_modules
