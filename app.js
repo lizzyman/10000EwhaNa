@@ -11,7 +11,7 @@ var emptyclassbot = require('./emptyclass');
 //subwaybot
 var subwaybot = require('./subway');
 
-var dicebot = require('./dicebot');
+//var dicebot = require('./dicebot');
 // =======
 // >>>>>>> f4f33e01020c31030fb0ddd2b476b1ea41616fab
 
@@ -37,7 +37,7 @@ app.post('/gonggang', gonggangbot);
 app.post('/emptyclass', emptyclassbot);
 //subwaybot
 app.post('/subway'. subwaybot);
-app.post('/dice', dicebot);
+// app.post('/dice', dicebot);
 // =======
 // >>>>>>> f4f33e01020c31030fb0ddd2b476b1ea41616fab
 
